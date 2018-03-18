@@ -55,11 +55,11 @@ def check_env():
     fd1.close()
     if int(b) != 0:
         gau.die("ASLR is not disabled. Run: echo 0 | sudo tee /proc/sys/kernel/randomize_va_space")
-    fd=open("/proc/sys/kernel/yama/ptrace_scope",'r')
-    b=fd.read(1)
-    fd.close()
-    if int(b) != 0:
-        gau.die("Pintool may not work. Run: echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope")
+    #fd=open("/proc/sys/kernel/yama/ptrace_scope",'r')
+    #b=fd.read(1)
+    #fd.close()
+    #if int(b) != 0:
+    #    gau.die("Pintool may not work. Run: echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope")
 
 
 def run(cmd):
